@@ -1,0 +1,92 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  lang?: 'ko' | 'en';
+}
+
+const {
+  title,
+  description = 'tovin Labs — 교육용 앱과 모바일 게임을 만드는 1인+AI 스튜디오',
+  lang = 'ko',
+} = Astro.props;
+
+const isKo = lang === 'ko';
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const legalLinks = isKo
+  ? [
+      { href: '/legal/privacy/kotoba', label: '코토바 처방 정책' },
+      { href: '/legal/privacy/mochi-jump', label: '모치 점프 처방 정책' },
+      { href: '/legal/terms', label: '이용약관' },
+      { href: '/legal/kids-policy', label: '아동 보호 정책' },
+    ]
+  : [
+      { href: '/en/legal/privacy/kotoba', label: 'Kotoba Privacy' },
+      { href: '/en/legal/privacy/mochi-jump', label: 'Mochi Jump Privacy' },
+      { href: '/en/legal/terms', label: 'Terms' },
+      { href: '/en/legal/kids-policy', label: 'Kids Policy' },
+    ];
+const homeHref = isKo ? '/' : '/en/';
+const otherLangHref = isKo ? '/en/' : '/';
+const otherLangLabel = isKo ? 'EN' : '한국어';
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="canonical" href={canonicalURL} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="tovin Labs" />
+    <meta property="og:locale" content={isKo ? 'ko_KR' : 'en_US'} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <header
+      class="px-6 py-5 flex items-center justify-between border-b border-[var(--color-border)]"
+    >
+      <a href={homeHref} class="font-semibold tracking-tight text-lg">tovin Labs</a>
+      <nav class="flex gap-4 text-sm text-[var(--color-fg-muted)]">
+        <a href={otherLangHref} class="hover:text-[var(--color-fg)] transition-colors">
+          {otherLangLabel}
+        </a>
+      </nav>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer
+      class="px-6 py-8 mt-16 border-t border-[var(--color-border)] text-sm text-[var(--color-fg-muted)]"
+    >
+      <div
+        class="max-w-5xl mx-auto flex flex-col sm:flex-row gap-4 sm:gap-8 sm:items-center justify-between"
+      >
+        <p>© {new Date().getFullYear()} tovin Labs. All rights reserved.</p>
+        <ul class="flex flex-wrap gap-x-6 gap-y-2">
+          {
+            legalLinks.map((link) => (
+              <li>
+                <a href={link.href} class="hover:text-[var(--color-fg)]">
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="tovin Labs — Educational Apps & Mobile Games"
+  description="tovin Labs is a one-person + AI studio building educational apps and mobile games."
+  lang="en"
+>
+  <section class="px-6 pt-20 pb-16 max-w-5xl mx-auto text-center">
+    <h1 class="text-4xl sm:text-6xl font-bold tracking-tight">
+      Learn fun.<br />Play happy.
+    </h1>
+    <p class="mt-6 text-lg text-[var(--color-fg-muted)] max-w-xl mx-auto">
+      tovin Labs is a one-person + AI studio building educational apps and mobile games.
+    </p>
+    <a
+      href="#products"
+      class="inline-block mt-10 px-6 py-3 rounded-full bg-[var(--color-fg)] text-[var(--color-bg)] font-medium hover:opacity-90 transition-opacity"
+    >
+      View products ↓
+    </a>
+  </section>
+
+  <section id="products" class="px-6 py-16 max-w-5xl mx-auto">
+    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-10">Products</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <article
+        class="rounded-2xl bg-[var(--color-bg-alt)] border border-[var(--color-border)] p-8 hover:shadow-lg transition-shadow"
+      >
+        <p class="text-xs uppercase tracking-wider text-[var(--color-fg-muted)] mb-2">Education</p>
+        <h3 class="text-2xl font-bold mb-3">Kotoba</h3>
+        <p class="text-[var(--color-fg-muted)]">
+          Master JLPT N5–N1 vocabulary with timed focus sessions, instant tests, and a smart
+          re-learning loop.
+        </p>
+        <p class="mt-4 text-sm text-[var(--color-fg-muted)]">Launching soon</p>
+      </article>
+      <article
+        class="rounded-2xl bg-[var(--color-bg-alt)] border border-[var(--color-border)] p-8 hover:shadow-lg transition-shadow"
+      >
+        <p class="text-xs uppercase tracking-wider text-[var(--color-fg-muted)] mb-2">Game</p>
+        <h3 class="text-2xl font-bold mb-3">Mochi Jump</h3>
+        <p class="text-[var(--color-fg-muted)]">
+          A bouncy infinite jumper for ages 7–13. Help Mochi reach the top of the sky.
+        </p>
+        <p class="mt-4 text-sm text-[var(--color-fg-muted)]">Launching soon</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="px-6 py-16 max-w-5xl mx-auto border-t border-[var(--color-border)]">
+    <div class="max-w-2xl">
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-4">About</h2>
+      <p class="text-[var(--color-fg-muted)] leading-relaxed">
+        tovin Labs is a small studio crafted in Korea. We move fast and care deeply — making
+        learning and play that delights.
+      </p>
+      <p class="mt-4 text-[var(--color-fg-muted)]">
+        Contact: <a href="mailto:hello@tovinlabs.com" class="text-[var(--color-fg)] underline">
+          hello@tovinlabs.com
+        </a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
