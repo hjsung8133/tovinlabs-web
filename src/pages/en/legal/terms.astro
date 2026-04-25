@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Content } from '../../../content/legal/en/terms.md';
 ---
 
 <BaseLayout
@@ -7,20 +8,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
   description="tovin Labs terms of service"
   lang="en"
 >
-  <article class="px-6 py-16 max-w-3xl mx-auto">
-    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-2">Terms of Service</h1>
-    <p class="text-[var(--color-fg-muted)] mb-12">
-      Last updated: <span data-placeholder>To be set on launch</span>
-    </p>
-
-    <p class="text-[var(--color-fg-muted)] leading-relaxed mb-6">
-      The full terms of service will replace this page shortly.
-    </p>
-
-    <p class="text-[var(--color-fg-muted)]">
-      Contact: <a href="mailto:hello@tovinlabs.com" class="text-[var(--color-fg)] underline">
-        hello@tovinlabs.com
-      </a>
-    </p>
+  <article class="px-6 py-16 mx-auto max-w-3xl prose">
+    <Content />
   </article>
 </BaseLayout>

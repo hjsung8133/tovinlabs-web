@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Content } from '../../content/legal/ko/kids-policy.md';
 ---
 
 <BaseLayout
@@ -7,19 +8,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   description="tovin Labs의 만 14세 미만 아동 개인정보 보호 정책"
   lang="ko"
 >
-  <article class="px-6 py-16 max-w-3xl mx-auto">
-    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-2">아동 보호 정책</h1>
-    <p class="text-[var(--color-fg-muted)] mb-12">최종 수정일: <span data-placeholder>출시일에 확정</span></p>
-
-    <p class="text-[var(--color-fg-muted)] leading-relaxed mb-6">
-      tovin Labs는 만 14세 미만 아동의 개인정보를 안전하게 보호하기 위해 별도의 정책을 운영합니다.
-      본 페이지는 정식 정책으로 곧 교체됩니다.
-    </p>
-
-    <p class="text-[var(--color-fg-muted)]">
-      문의: <a href="mailto:privacy@tovinlabs.com" class="text-[var(--color-fg)] underline">
-        privacy@tovinlabs.com
-      </a>
-    </p>
+  <article class="px-6 py-16 mx-auto max-w-3xl prose">
+    <Content />
   </article>
 </BaseLayout>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { Content } from '../../../content/legal/ko/privacy-kotoba.md';
 ---
 
 <BaseLayout
@@ -7,19 +8,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
   description="JLPT 일본어 학습 앱 코토바의 개인정보처리방침"
   lang="ko"
 >
-  <article class="px-6 py-16 max-w-3xl mx-auto">
-    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-2">코토바 개인정보처리방침</h1>
-    <p class="text-[var(--color-fg-muted)] mb-12">최종 수정일: <span data-placeholder>출시일에 확정</span></p>
-
-    <p class="text-[var(--color-fg-muted)] leading-relaxed mb-6">
-      본 페이지는 정식 처방 정책으로 곧 교체됩니다. 코토바는 출시 준비 중이며, 데이터 처리에 관한
-      상세 정책 문서가 게재될 예정입니다.
-    </p>
-
-    <p class="text-[var(--color-fg-muted)]">
-      문의: <a href="mailto:privacy@tovinlabs.com" class="text-[var(--color-fg)] underline">
-        privacy@tovinlabs.com
-      </a>
-    </p>
+  <article class="px-6 py-16 mx-auto max-w-3xl prose">
+    <Content />
   </article>
 </BaseLayout>
