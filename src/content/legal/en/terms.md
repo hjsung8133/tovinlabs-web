@@ -104,6 +104,23 @@ For the purposes of these Terms:
 3. If discussion does not resolve the dispute, the Member may apply for mediation through the Korea Consumer Agency or another dispute resolution body established under Korea's Framework Act on Consumers.
 4. These Terms are governed by the laws of the Republic of Korea. Any litigation between the Company and a Member arising out of or relating to these Terms shall be brought in the Seoul Central District Court (1st instance jurisdiction).
 
+## Article 13 (Business Information)
+
+In accordance with Article 13 of Korea's Act on Consumer Protection in Electronic Commerce, the Company's business information is disclosed as follows.
+
+| Item | Detail |
+|---|---|
+| Business name | Tovin Labs |
+| Representative | SUNG HYUN JOON |
+| Business Registration Number | 386-24-02209 |
+| Mail-Order Business Registration Number | Filing in process — this notice will be updated upon receipt |
+| Business address | 50-20 Dolmun-ro, Gimpo-si, Gyeonggi-do, 10108, Republic of Korea |
+| Phone | +82-10-5751-8133 |
+| Email (general inquiries) | hello@tovinlabs.com |
+| Email (privacy inquiries) | privacy@tovinlabs.com |
+| Business type / item | Information and communication / Application software publishing |
+| Hosting providers | Cloudflare (website), Supabase Inc. (app backend, AWS Tokyo region) |
+
 ## Supplementary Provisions
 
 1. These Terms take effect on `[YYYY-MM-DD — to be set on launch]`.

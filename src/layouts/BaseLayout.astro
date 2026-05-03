@@ -17,8 +17,8 @@ const isKo = lang === 'ko';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const legalLinks = isKo
   ? [
-      { href: '/legal/privacy/kotoba', label: '코토바 처방 정책' },
-      { href: '/legal/privacy/mochi-jump', label: '모치 점프 처방 정책' },
+      { href: '/legal/privacy/kotoba', label: '코토바 개인정보처리방침' },
+      { href: '/legal/privacy/mochi-jump', label: '모치 점프 개인정보처리방침' },
       { href: '/legal/terms', label: '이용약관' },
       { href: '/legal/kids-policy', label: '아동 보호 정책' },
     ]
@@ -31,6 +31,24 @@ const legalLinks = isKo
 const homeHref = isKo ? '/' : '/en/';
 const otherLangHref = isKo ? '/en/' : '/';
 const otherLangLabel = isKo ? 'EN' : '한국어';
+
+const businessInfo = isKo
+  ? [
+      ['상호', '토빈랩스 (Tovin Labs)'],
+      ['대표자', '성현준'],
+      ['사업자등록번호', '386-24-02209'],
+      ['통신판매업 신고번호', '신고 후 갱신 예정'],
+      ['사업장 소재지', '경기도 김포시 돌문로 50-20, 7층 773-2호(사우동)'],
+      ['연락처', '+82-10-5751-8133 / hello@tovinlabs.com'],
+    ]
+  : [
+      ['Business name', 'Tovin Labs'],
+      ['Representative', 'SUNG HYUN JOON'],
+      ['Business Registration No.', '386-24-02209'],
+      ['Mail-Order Business Registration No.', 'Filing in process — to be updated'],
+      ['Business address', '50-20 Dolmun-ro, Gimpo-si, Gyeonggi-do, 10108, Republic of Korea'],
+      ['Contact', '+82-10-5751-8133 / hello@tovinlabs.com'],
+    ];
 ---
 
 <!doctype html>
@@ -72,21 +90,35 @@ const otherLangLabel = isKo ? 'EN' : '한국어';
     <footer
       class="px-6 py-8 mt-16 border-t border-[var(--color-border)] text-sm text-[var(--color-fg-muted)]"
     >
-      <div
-        class="max-w-5xl mx-auto flex flex-col sm:flex-row gap-4 sm:gap-8 sm:items-center justify-between"
-      >
-        <p>© {new Date().getFullYear()} tovin Labs. All rights reserved.</p>
-        <ul class="flex flex-wrap gap-x-6 gap-y-2">
+      <div class="max-w-5xl mx-auto flex flex-col gap-6">
+        <div
+          class="flex flex-col sm:flex-row gap-4 sm:gap-8 sm:items-center justify-between"
+        >
+          <p>© {new Date().getFullYear()} tovin Labs. All rights reserved.</p>
+          <ul class="flex flex-wrap gap-x-6 gap-y-2">
+            {
+              legalLinks.map((link) => (
+                <li>
+                  <a href={link.href} class="hover:text-[var(--color-fg)]">
+                    {link.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <dl
+          class="grid grid-cols-1 sm:grid-cols-[max-content_1fr] gap-x-4 gap-y-1 text-xs leading-relaxed border-t border-[var(--color-border)] pt-4"
+        >
           {
-            legalLinks.map((link) => (
-              <li>
-                <a href={link.href} class="hover:text-[var(--color-fg)]">
-                  {link.label}
-                </a>
-              </li>
+            businessInfo.map(([label, value]) => (
+              <>
+                <dt class="font-medium">{label}</dt>
+                <dd>{value}</dd>
+              </>
             ))
           }
-        </ul>
+        </dl>
       </div>
     </footer>
   </body>

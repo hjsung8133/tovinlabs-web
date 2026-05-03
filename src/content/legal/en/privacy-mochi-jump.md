@@ -25,9 +25,12 @@ Where these standards differ, the Company applies the **strictest standard** to 
 
 ## 2. Data Controller
 
-- **Company**: tovin Labs
-- **Data Protection Officer**: tovin Labs Representative
-- **Contact**: privacy@tovinlabs.com
+- **Business name**: Tovin Labs
+- **Representative**: SUNG HYUN JOON
+- **Business Registration Number**: 386-24-02209
+- **Business address**: 50-20 Dolmun-ro, Gimpo-si, Gyeonggi-do, 10108, Republic of Korea
+- **Data Protection Officer**: SUNG HYUN JOON (Representative)
+- **Contact**: privacy@tovinlabs.com / +82-10-5751-8133
 
 ---
 
@@ -203,8 +206,9 @@ Users (or their parents) can reset the advertising identifier or limit ad tracki
 
 ## 14. Privacy Officer
 
-- **Privacy Officer**: tovin Labs Representative
+- **Privacy Officer**: SUNG HYUN JOON (Representative)
 - **Email**: privacy@tovinlabs.com
+- **Phone**: +82-10-5751-8133
 
 Users and parents may direct any privacy-related question or concern to the address above. The Company will respond promptly and in good faith.
 

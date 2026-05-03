@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project: tovin Labs 회사 홈페이지 (tovinlabs.com)
 
-회사 소개, 제품 랜딩, 법적 문서(처방 정책·이용약관·아동 보호)를 게재하는 정적 마케팅 사이트. Cloudflare Pages 배포.
+회사 소개, 제품 랜딩, 법적 문서(개인정보처리방침·이용약관·아동 보호 정책)를 게재하는 정적 마케팅 사이트. Cloudflare Pages 배포.
 
 ## 회사 운영 컨텍스트
 

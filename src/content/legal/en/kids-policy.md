@@ -158,10 +158,13 @@ If you do not agree to a new version of the policy, you can delete your child's 
 
 ## 13. Contact us
 
-- **Company**: tovin Labs
-- **Representative**: tovin Labs leadership
+- **Business name**: Tovin Labs
+- **Representative**: SUNG HYUN JOON
+- **Business Registration Number**: 386-24-02209
+- **Business address**: 50-20 Dolmun-ro, Gimpo-si, Gyeonggi-do, 10108, Republic of Korea
 - **Website**: https://tovinlabs.com
 - **Privacy contact**: privacy@tovinlabs.com
+- **Phone**: +82-10-5751-8133
 
 We answer every parent inquiry personally. Building a service your child can enjoy safely is the most important responsibility we have.
 

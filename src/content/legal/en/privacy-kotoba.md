@@ -11,8 +11,13 @@ tovin Labs ("the Company", "we", "us") has adopted this Privacy Policy in accord
 
 The Company has designated the following person to oversee personal information processing for the Service and to handle matters relating to data subject rights and remedies.
 
-- **Person Responsible for Personal Information Processing**: tovin Labs Representative
+- **Business name**: Tovin Labs
+- **Representative**: SUNG HYUN JOON
+- **Business Registration Number**: 386-24-02209
+- **Business address**: 50-20 Dolmun-ro, Gimpo-si, Gyeonggi-do, 10108, Republic of Korea
+- **Person Responsible for Personal Information Processing**: SUNG HYUN JOON (Representative)
 - **Contact (email)**: privacy@tovinlabs.com
+- **Phone**: +82-10-5751-8133
 
 
 
@@ -224,8 +229,8 @@ In accordance with Article 29 of Korea's Personal Information Protection Act (PI
 
 The Company has designated the following Data Protection Officer (DPO) to oversee personal information processing and to handle data subject rights and remedies.
 
-- **Data Protection Officer**: tovin Labs Representative
-- **Contact**: privacy@tovinlabs.com
+- **Data Protection Officer**: SUNG HYUN JOON (Representative)
+- **Contact**: privacy@tovinlabs.com / +82-10-5751-8133
 - **Department**: tovin Labs Operations Team
 
 You may contact the DPO with any inquiry, complaint, or remedy request relating to personal information that arises during your use of the Service. We will respond to and act on your inquiry without undue delay.
