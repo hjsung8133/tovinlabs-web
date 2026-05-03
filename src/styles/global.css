@@ -12,19 +12,21 @@
   --font-sans: -apple-system, BlinkMacSystemFont, "Pretendard Variable", Pretendard, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
-html {
-  background-color: var(--color-bg);
-  color: var(--color-fg);
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@layer base {
+  html {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-body {
-  min-height: 100vh;
-  line-height: 1.6;
-}
+  body {
+    min-height: 100vh;
+    line-height: 1.6;
+  }
 
-a {
-  color: inherit;
+  a {
+    color: inherit;
+  }
 }
