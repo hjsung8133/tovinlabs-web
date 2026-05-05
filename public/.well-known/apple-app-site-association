@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "Y6UBRB4YYH.com.mochijump.app",
+        "paths": [
+          "/mochi-jump",
+          "/mochi-jump/*",
+          "/en/mochi-jump",
+          "/en/mochi-jump/*"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const APP_STORE_ID = ''; // Fill after release
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.mochijump.app';
+const APP_STORE_URL = APP_STORE_ID ? `https://apps.apple.com/app/id${APP_STORE_ID}` : '';
+---
+
+<BaseLayout
+  title="Mochi Jump — Squishy Jump Game for Kids"
+  description="Help squishy Mochi reach the top of the sky! A bouncy infinite jumper for ages 7–13. Compete with friends through KakaoTalk."
+  lang="en"
+>
+  {APP_STORE_ID && (
+    <Fragment slot="head">
+      <meta
+        name="apple-itunes-app"
+        content={`app-id=${APP_STORE_ID}, app-argument=https://tovinlabs.com/en/mochi-jump`}
+      />
+    </Fragment>
+  )}
+
+  <section class="px-6 pt-16 pb-12 max-w-3xl mx-auto text-center">
+    <img
+      src="/mochi-jump/og-image.png"
+      alt="Mochi Jump"
+      width="240"
+      height="240"
+      class="mx-auto rounded-3xl shadow-xl"
+    />
+    <h1 class="mt-8 text-4xl sm:text-5xl font-bold tracking-tight">Mochi Jump</h1>
+    <p class="mt-6 text-lg text-[var(--color-fg-muted)] max-w-xl mx-auto">
+      Help squishy Mochi reach the top of the sky!<br />
+      A bouncy infinite jumper for ages 7–13.
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+      {APP_STORE_URL ? (
+        <a
+          id="ios-download"
+          href={APP_STORE_URL}
+          class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[var(--color-fg)] text-[var(--color-bg)] font-medium min-w-[200px] hover:opacity-90 transition-opacity"
+        >
+          Download on App Store
+        </a>
+      ) : (
+        <span
+          class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[var(--color-bg-alt)] border border-[var(--color-border)] text-[var(--color-fg-muted)] font-medium min-w-[200px] cursor-not-allowed"
+        >
+          App Store · Coming Soon
+        </span>
+      )}
+      <a
+        id="android-download"
+        href={PLAY_STORE_URL}
+        class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[var(--color-fg)] text-[var(--color-bg)] font-medium min-w-[200px] hover:opacity-90 transition-opacity"
+      >
+        Get it on Google Play
+      </a>
+    </div>
+  </section>
+
+  <section class="px-6 py-12 max-w-3xl mx-auto border-t border-[var(--color-border)]">
+    <h2 class="text-2xl font-bold tracking-tight mb-6">Features</h2>
+    <ul class="space-y-4 text-[var(--color-fg-muted)]">
+      <li>🎮 <strong class="text-[var(--color-fg)]">One-tap controls</strong> — Tap left or right to jump</li>
+      <li>🌈 <strong class="text-[var(--color-fg)]">15 zones</strong> — From meadows to heaven, varied backgrounds</li>
+      <li>👯 <strong class="text-[var(--color-fg)]">5 characters</strong> — Pink, Angel, Flour, Fire, Hulk Mochi</li>
+      <li>✨ <strong class="text-[var(--color-fg)]">My Mochi</strong> — Create your own with 3.3M combinations</li>
+      <li>🏆 <strong class="text-[var(--color-fg)]">Weekly/Monthly leaderboards</strong> — Compete globally and with friends</li>
+      <li>🎁 <strong class="text-[var(--color-fg)]">Optional rewarded ads</strong> — No forced ads, voluntary only</li>
+    </ul>
+  </section>
+
+  <section class="px-6 py-12 max-w-3xl mx-auto border-t border-[var(--color-border)]">
+    <h2 class="text-2xl font-bold tracking-tight mb-4">Info</h2>
+    <dl class="grid grid-cols-[max-content_1fr] gap-x-6 gap-y-2 text-sm">
+      <dt class="font-medium">Developer</dt>
+      <dd class="text-[var(--color-fg-muted)]">Tovin Labs</dd>
+      <dt class="font-medium">Recommended Age</dt>
+      <dd class="text-[var(--color-fg-muted)]">7–13 (Everyone)</dd>
+      <dt class="font-medium">Languages</dt>
+      <dd class="text-[var(--color-fg-muted)]">Korean · English · Japanese</dd>
+      <dt class="font-medium">Platforms</dt>
+      <dd class="text-[var(--color-fg-muted)]">iOS · Android</dd>
+      <dt class="font-medium">Contact</dt>
+      <dd>
+        <a href="mailto:hello@tovinlabs.com" class="text-[var(--color-fg)] underline">
+          hello@tovinlabs.com
+        </a>
+      </dd>
+    </dl>
+  </section>
+
+  <section class="px-6 pb-12 max-w-3xl mx-auto">
+    <p class="text-sm text-[var(--color-fg-muted)]">
+      <a href="/en/legal/privacy/mochi-jump" class="underline hover:text-[var(--color-fg)]">Privacy Policy</a>
+      ·
+      <a href="/en/legal/terms" class="underline hover:text-[var(--color-fg)]">Terms</a>
+      ·
+      <a href="/en/legal/kids-policy" class="underline hover:text-[var(--color-fg)]">Kids Policy</a>
+      ·
+      <a href="/legal/probability/mochi-jump#en" class="underline hover:text-[var(--color-fg)]">Drop Rates</a>
+    </p>
+  </section>
+
+  <script>
+    const ua = navigator.userAgent;
+    const isIOS = /iPhone|iPad|iPod/i.test(ua);
+    const isAndroid = /Android/i.test(ua);
+    const ios = document.getElementById('ios-download');
+    const android = document.getElementById('android-download');
+    if (isIOS && android) android.classList.add('opacity-50');
+    if (isAndroid && ios) ios.classList.add('opacity-50');
+  </script>
+</BaseLayout>

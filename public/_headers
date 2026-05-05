@@ -1,0 +1,8 @@
+# Universal Link / App Link 메타데이터 — application/json 강제
+# Apple 가이드: AASA는 정확히 application/json Content-Type 요구 (확장자 없음)
+# Google 가이드: assetlinks.json도 application/json
+/.well-known/apple-app-site-association
+  Content-Type: application/json
+
+/.well-known/assetlinks.json
+  Content-Type: application/json

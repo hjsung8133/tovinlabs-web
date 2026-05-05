@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// 출시 후 App Store ID를 받으면 여기에 채워넣으면 Smart Banner + iOS 다운로드 버튼이 활성화됨.
+// 비어있으면 Google Play 우선 노출 + iOS는 "Coming Soon" 표시.
+const APP_STORE_ID = ''; // 예: '6701234567'
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.mochijump.app';
+const APP_STORE_URL = APP_STORE_ID ? `https://apps.apple.com/app/id${APP_STORE_ID}` : '';
+---
+
+<BaseLayout
+  title="Mochi Jump 모치 점프 — 말랑말랑 점프 게임"
+  description="말랑말랑 모치와 하늘 끝까지! 7~13세 어린이를 위한 무한 점프 캐주얼 게임. 카카오톡으로 친구와 기록 경쟁."
+  lang="ko"
+>
+  {/* App Store ID 발급 후 활성화 — Smart Banner 자동 표시 */}
+  {APP_STORE_ID && (
+    <Fragment slot="head">
+      <meta
+        name="apple-itunes-app"
+        content={`app-id=${APP_STORE_ID}, app-argument=https://tovinlabs.com/mochi-jump`}
+      />
+    </Fragment>
+  )}
+
+  <section class="px-6 pt-16 pb-12 max-w-3xl mx-auto text-center">
+    <img
+      src="/mochi-jump/og-image.png"
+      alt="Mochi Jump"
+      width="240"
+      height="240"
+      class="mx-auto rounded-3xl shadow-xl"
+    />
+    <h1 class="mt-8 text-4xl sm:text-5xl font-bold tracking-tight">Mochi Jump</h1>
+    <p class="mt-3 text-xl text-[var(--color-fg-muted)]">모치 점프</p>
+    <p class="mt-6 text-lg text-[var(--color-fg-muted)] max-w-xl mx-auto">
+      말랑말랑 모치와 하늘 끝까지!<br />
+      7~13세를 위한 무한 점프 캐주얼 게임.
+    </p>
+
+    {/* 다운로드 버튼 */}
+    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+      {APP_STORE_URL ? (
+        <a
+          id="ios-download"
+          href={APP_STORE_URL}
+          class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[var(--color-fg)] text-[var(--color-bg)] font-medium min-w-[200px] hover:opacity-90 transition-opacity"
+        >
+          App Store에서 받기
+        </a>
+      ) : (
+        <span
+          class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[var(--color-bg-alt)] border border-[var(--color-border)] text-[var(--color-fg-muted)] font-medium min-w-[200px] cursor-not-allowed"
+        >
+          App Store · 곧 출시
+        </span>
+      )}
+      <a
+        id="android-download"
+        href={PLAY_STORE_URL}
+        class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[var(--color-fg)] text-[var(--color-bg)] font-medium min-w-[200px] hover:opacity-90 transition-opacity"
+      >
+        Google Play에서 받기
+      </a>
+    </div>
+  </section>
+
+  <section class="px-6 py-12 max-w-3xl mx-auto border-t border-[var(--color-border)]">
+    <h2 class="text-2xl font-bold tracking-tight mb-6">게임 특징</h2>
+    <ul class="space-y-4 text-[var(--color-fg-muted)]">
+      <li>🎮 <strong class="text-[var(--color-fg)]">간단한 조작</strong> — 좌우 탭으로 점프</li>
+      <li>🌈 <strong class="text-[var(--color-fg)]">15개 존</strong> — 풀밭부터 천국까지 다양한 배경</li>
+      <li>👯 <strong class="text-[var(--color-fg)]">5종 캐릭터</strong> — 분홍·천사·밀가루·불꽃·헐크 모치</li>
+      <li>✨ <strong class="text-[var(--color-fg)]">나만의 모치</strong> — 330만가지 조합으로 직접 만들기</li>
+      <li>🏆 <strong class="text-[var(--color-fg)]">주간/월간 리더보드</strong> — 친구·전세계와 기록 경쟁</li>
+      <li>🎁 <strong class="text-[var(--color-fg)]">광고 시청 보상</strong> — 강제 광고 없이 자발적 시청만</li>
+    </ul>
+  </section>
+
+  <section class="px-6 py-12 max-w-3xl mx-auto border-t border-[var(--color-border)]">
+    <h2 class="text-2xl font-bold tracking-tight mb-4">정보</h2>
+    <dl class="grid grid-cols-[max-content_1fr] gap-x-6 gap-y-2 text-sm">
+      <dt class="font-medium">개발사</dt>
+      <dd class="text-[var(--color-fg-muted)]">Tovin Labs</dd>
+      <dt class="font-medium">권장 연령</dt>
+      <dd class="text-[var(--color-fg-muted)]">7~13세 (전체이용가)</dd>
+      <dt class="font-medium">언어</dt>
+      <dd class="text-[var(--color-fg-muted)]">한국어 · English · 日本語</dd>
+      <dt class="font-medium">플랫폼</dt>
+      <dd class="text-[var(--color-fg-muted)]">iOS · Android</dd>
+      <dt class="font-medium">문의</dt>
+      <dd>
+        <a href="mailto:hello@tovinlabs.com" class="text-[var(--color-fg)] underline">
+          hello@tovinlabs.com
+        </a>
+      </dd>
+    </dl>
+  </section>
+
+  <section class="px-6 pb-12 max-w-3xl mx-auto">
+    <p class="text-sm text-[var(--color-fg-muted)]">
+      <a href="/legal/privacy/mochi-jump" class="underline hover:text-[var(--color-fg)]">개인정보처리방침</a>
+      ·
+      <a href="/legal/terms" class="underline hover:text-[var(--color-fg)]">이용약관</a>
+      ·
+      <a href="/legal/kids-policy" class="underline hover:text-[var(--color-fg)]">아동 보호 정책</a>
+      ·
+      <a href="/legal/probability/mochi-jump" class="underline hover:text-[var(--color-fg)]">확률 정보</a>
+    </p>
+  </section>
+
+  <script>
+    // 디바이스 자동 감지 — 해당 OS 다운로드 버튼을 우선 강조 (선택적 자동 redirect는 비활성)
+    const ua = navigator.userAgent;
+    const isIOS = /iPhone|iPad|iPod/i.test(ua);
+    const isAndroid = /Android/i.test(ua);
+    const ios = document.getElementById('ios-download');
+    const android = document.getElementById('android-download');
+    if (isIOS && android) android.classList.add('opacity-50');
+    if (isAndroid && ios) ios.classList.add('opacity-50');
+  </script>
+</BaseLayout>
