@@ -23,7 +23,7 @@ We hold ourselves to five basic promises:
 
 ## 2. Who this policy applies to
 
-This policy applies primarily to **Mochi Jump** — an endless-jump arcade game designed for children **ages 7 to 13**. Our other app, **Kotoba** (a language-learning app), is intended for users 14 and older, so this Kids Policy has only very limited relevance there.
+This policy applies to **Mochi Jump** — a casual endless-jump game rated for everyone. Mochi Jump enforces child-safety policies (COPPA, GDPR-K) so the experience remains safe for children. Our other app, **Kotoba** (a language-learning app), is intended for users 14 and older, so this Kids Policy has only very limited relevance there.
 
 Whenever we say "child" or "children" in this document, we generally mean a user **under 14**. In practice, we apply the **strictest** of the following frameworks to every child user, regardless of where they live:
 

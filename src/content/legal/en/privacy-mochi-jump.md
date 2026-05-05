@@ -9,7 +9,7 @@
 
 ## 1. Scope and Child-First Principles
 
-This Privacy Policy applies to "Mochi Jump," a child-friendly mobile game operated by the Company. The Service is designed for **children ages 7 to 13**, and the Company complies with the following laws and platform guidelines:
+This Privacy Policy applies to "Mochi Jump," a mobile game operated by the Company. The Service is **rated for everyone**, and is designed to remain safe even for children. The Company complies with the following laws and platform guidelines:
 
 - **Article 22-2 of Korea's Personal Information Protection Act (special provisions for minors under 14)** and its Enforcement Decree
 - The U.S. **Children's Online Privacy Protection Act (COPPA)** — protecting children under 13
@@ -73,7 +73,7 @@ The Company **never** collects: real names, government ID numbers, phone numbers
 
 ## 5. Children Under 14 — Enhanced Protections [Important]
 
-The Service is designed for children, and the Company has put the following enhanced safeguards in place.
+The Service is rated for everyone and remains safe for children, so the Company has put the following enhanced safeguards in place.
 
 ### 5-1. Parental Consent — Delegated to OS-Level Controls
 
