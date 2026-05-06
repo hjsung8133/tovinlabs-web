@@ -3,12 +3,12 @@
     "apps": [],
     "details": [
       {
-        "appID": "Y6UBRB4YYH.com.mochijump.app",
-        "paths": [
-          "/mochi-jump",
-          "/mochi-jump/*",
-          "/en/mochi-jump",
-          "/en/mochi-jump/*"
+        "appIDs": ["Y6UBRB4YYH.com.mochijump.app"],
+        "components": [
+          { "/": "/friend/add", "?": { "code": "?*" }, "comment": "친구 추가 딥링크 (한국어)" },
+          { "/": "/en/friend/add", "?": { "code": "?*" }, "comment": "친구 추가 딥링크 (영어)" },
+          { "/": "/mochi-jump*", "comment": "마케팅 페이지 (한국어)" },
+          { "/": "/en/mochi-jump*", "comment": "마케팅 페이지 (영어)" }
         ]
       }
     ]

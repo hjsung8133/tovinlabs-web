@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const APP_STORE_ID = ''; // Fill after release
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.mochijump.app';
+const APP_STORE_URL = APP_STORE_ID ? `https://apps.apple.com/app/id${APP_STORE_ID}` : '';
+---
+
+<BaseLayout
+  title="Add Friend — Mochi Jump"
+  description="You received a Mochi Jump friend code. Open the app to add them."
+  lang="en"
+>
+  <section class="px-6 pt-16 pb-12 max-w-md mx-auto text-center">
+    <p class="text-xs uppercase tracking-wider text-[var(--color-fg-muted)]">Mochi Jump</p>
+    <h1 class="mt-3 text-3xl sm:text-4xl font-bold tracking-tight">Add Friend</h1>
+
+    <div id="valid-block" hidden>
+      <p class="mt-10 text-sm text-[var(--color-fg-muted)]">Friend code</p>
+      <div
+        id="friend-code"
+        class="mt-2 text-4xl sm:text-5xl font-bold tracking-widest tabular-nums"
+      ></div>
+      <p class="mt-8 text-[var(--color-fg-muted)] leading-relaxed">
+        If you have the app installed it will open automatically.<br />
+        Otherwise, install Mochi Jump below and<br />
+        enter the code above on the Friends screen.
+      </p>
+    </div>
+
+    <p id="invalid-block" class="mt-10 text-[var(--color-fg-muted)]">
+      Invalid friend code.
+    </p>
+
+    <div class="mt-10 flex flex-col gap-3">
+      {APP_STORE_URL ? (
+        <a
+          href={APP_STORE_URL}
+          class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[var(--color-fg)] text-[var(--color-bg)] font-medium hover:opacity-90 transition-opacity"
+        >
+          Download on App Store
+        </a>
+      ) : (
+        <span
+          class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[var(--color-bg-alt)] border border-[var(--color-border)] text-[var(--color-fg-muted)] font-medium"
+        >
+          App Store · Coming Soon
+        </span>
+      )}
+      <a
+        href={PLAY_STORE_URL}
+        class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[var(--color-fg)] text-[var(--color-bg)] font-medium hover:opacity-90 transition-opacity"
+      >
+        Get it on Google Play
+      </a>
+    </div>
+
+    <p class="mt-12 text-xs text-[var(--color-fg-muted)]">
+      <a href="/en/mochi-jump" class="underline hover:text-[var(--color-fg)]">
+        About Mochi Jump →
+      </a>
+    </p>
+  </section>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const raw = (params.get('code') || '').replace(/[^0-9]/g, '');
+    if (raw.length === 8) {
+      const formatted = `#${raw.slice(0, 4)}-${raw.slice(4)}`;
+      const codeEl = document.getElementById('friend-code');
+      const validEl = document.getElementById('valid-block');
+      const invalidEl = document.getElementById('invalid-block');
+      if (codeEl) codeEl.textContent = formatted;
+      if (validEl) validEl.hidden = false;
+      if (invalidEl) invalidEl.hidden = true;
+    }
+  </script>
+</BaseLayout>

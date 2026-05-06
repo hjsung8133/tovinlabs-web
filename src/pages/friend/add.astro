@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const APP_STORE_ID = ''; // App Store ID 발급 후 채움
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.mochijump.app';
+const APP_STORE_URL = APP_STORE_ID ? `https://apps.apple.com/app/id${APP_STORE_ID}` : '';
+---
+
+<BaseLayout
+  title="친구 추가 — 모치 점프"
+  description="모치 점프 친구 코드를 받았어요. 앱을 열어 친구로 추가해 보세요."
+  lang="ko"
+>
+  <section class="px-6 pt-16 pb-12 max-w-md mx-auto text-center">
+    <p class="text-xs uppercase tracking-wider text-[var(--color-fg-muted)]">Mochi Jump</p>
+    <h1 class="mt-3 text-3xl sm:text-4xl font-bold tracking-tight">친구 추가</h1>
+
+    <div id="valid-block" hidden>
+      <p class="mt-10 text-sm text-[var(--color-fg-muted)]">친구 코드</p>
+      <div
+        id="friend-code"
+        class="mt-2 text-4xl sm:text-5xl font-bold tracking-widest tabular-nums"
+      ></div>
+      <p class="mt-8 text-[var(--color-fg-muted)] leading-relaxed">
+        앱이 설치되어 있다면 자동으로 열립니다.<br />
+        아직 없다면 아래에서 설치한 뒤<br />
+        앱 내 친구 화면에서 위 코드를 입력하세요.
+      </p>
+    </div>
+
+    <p id="invalid-block" class="mt-10 text-[var(--color-fg-muted)]">
+      유효하지 않은 친구 코드입니다.
+    </p>
+
+    <div class="mt-10 flex flex-col gap-3">
+      {APP_STORE_URL ? (
+        <a
+          href={APP_STORE_URL}
+          class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[var(--color-fg)] text-[var(--color-bg)] font-medium hover:opacity-90 transition-opacity"
+        >
+          App Store에서 받기
+        </a>
+      ) : (
+        <span
+          class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[var(--color-bg-alt)] border border-[var(--color-border)] text-[var(--color-fg-muted)] font-medium"
+        >
+          App Store · 곧 출시
+        </span>
+      )}
+      <a
+        href={PLAY_STORE_URL}
+        class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-[var(--color-fg)] text-[var(--color-bg)] font-medium hover:opacity-90 transition-opacity"
+      >
+        Google Play에서 받기
+      </a>
+    </div>
+
+    <p class="mt-12 text-xs text-[var(--color-fg-muted)]">
+      <a href="/mochi-jump" class="underline hover:text-[var(--color-fg)]">
+        모치 점프 알아보기 →
+      </a>
+    </p>
+  </section>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const raw = (params.get('code') || '').replace(/[^0-9]/g, '');
+    if (raw.length === 8) {
+      const formatted = `#${raw.slice(0, 4)}-${raw.slice(4)}`;
+      const codeEl = document.getElementById('friend-code');
+      const validEl = document.getElementById('valid-block');
+      const invalidEl = document.getElementById('invalid-block');
+      if (codeEl) codeEl.textContent = formatted;
+      if (validEl) validEl.hidden = false;
+      if (invalidEl) invalidEl.hidden = true;
+    }
+  </script>
+</BaseLayout>
