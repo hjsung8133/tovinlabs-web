@@ -6,3 +6,8 @@
 
 /.well-known/assetlinks.json
   Content-Type: application/json
+
+# AdMob 인벤토리 인증 — Google IAB Tech Lab 사양은 text/plain 요구
+/app-ads.txt
+  Content-Type: text/plain
+  Cache-Control: public, max-age=3600
