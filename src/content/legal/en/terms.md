@@ -113,7 +113,7 @@ In accordance with Article 13 of Korea's Act on Consumer Protection in Electroni
 | Business name | Tovin Labs |
 | Representative | SUNG HYUN JOON |
 | Business Registration Number | 386-24-02209 |
-| Mail-Order Business Registration Number | Filing in process — this notice will be updated upon receipt |
+| Mail-Order Business Registration Number | No. 2026-Gyeonggi-Gimpo-3813 |
 | Business address | 50-20 Dolmun-ro, Gimpo-si, Gyeonggi-do, 10108, Republic of Korea |
 | Phone | +82-10-5751-8133 |
 | Email (general inquiries) | hello@tovinlabs.com |
