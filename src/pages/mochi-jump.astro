@@ -1,11 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// 출시 후 App Store ID를 받으면 여기에 채워넣으면 Smart Banner + iOS 다운로드 버튼이 활성화됨.
-// 비어있으면 Google Play 우선 노출 + iOS는 "Coming Soon" 표시.
-const APP_STORE_ID = ''; // 예: '6701234567'
+// App Store 출시 완료 (2026-05-12) — Smart Banner + iOS 다운로드 버튼 활성화.
+const APP_STORE_ID = '6762001776';
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.mochijump.app';
-const APP_STORE_URL = APP_STORE_ID ? `https://apps.apple.com/app/id${APP_STORE_ID}` : '';
+const APP_STORE_URL = `https://apps.apple.com/kr/app/mochi-jump-%EB%AA%A8%EC%B9%98-%EC%A0%90%ED%94%84/id${APP_STORE_ID}`;
 ---
 
 <BaseLayout
