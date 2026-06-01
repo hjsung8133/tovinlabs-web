@@ -1,11 +1,14 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.mochijump.app",
       "sha256_cert_fingerprints": [
-        "7D:46:10:DD:E1:0D:4A:5B:26:62:08:A4:87:92:1C:DA:85:54:B5:EE:70:AA:F6:5E:F9:23:40:2F:A6:04:1F:92"
+        "7D:46:10:DD:E1:0D:4A:5B:26:62:08:A4:87:92:1C:DA:85:54:B5:EE:70:AA:F6:5E:F9:23:40:2F:A6:04:1F:92",
+        "49:60:88:26:10:72:CE:35:A9:12:5D:40:42:0E:7D:FC:E4:AE:BD:D6:09:2A:CA:9A:8F:E1:6A:E9:CF:87:F7:D4"
       ]
     }
   }
