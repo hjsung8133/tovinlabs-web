@@ -5,9 +5,12 @@ import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
+import cloudflare from '@astrojs/cloudflare';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://tovinlabs.com',
+
   i18n: {
     defaultLocale: 'ko',
     locales: ['ko', 'en'],
@@ -15,9 +18,11 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
+
   vite: {
     plugins: [tailwindcss()],
   },
+
   integrations: [
     mdx(),
     sitemap({
@@ -30,4 +35,6 @@ export default defineConfig({
       },
     }),
   ],
+
+  adapter: cloudflare(),
 });
